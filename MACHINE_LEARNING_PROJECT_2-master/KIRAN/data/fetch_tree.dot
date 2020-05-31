@@ -1,0 +1,14 @@
+digraph ID3_Tree {
+"0" [shape=box, style=filled, label="system.cpu.fetch.predictedBranches
+", weight=1]
+"1" [shape=box, style=filled, label="0
+(24)
+", weight=2]
+0 -> 1 [ label = "<=0.05"];
+"2" [shape=box, style=filled, label="1
+(10/5)
+", weight=2]
+0 -> 2 [ label = ">0.05"];
+{rank=same; 0;};
+{rank=same; 1;2;};
+}

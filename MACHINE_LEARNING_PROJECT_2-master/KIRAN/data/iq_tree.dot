@@ -1,0 +1,46 @@
+digraph ID3_Tree {
+"0" [shape=box, style=filled, label="system.cpu.iq.iqInstsIssued
+", weight=1]
+"1" [shape=box, style=filled, label="0
+(27)
+", weight=2]
+0 -> 1 [ label = "<=0.48"];
+"2" [shape=box, style=filled, label="system.cpu.iq.int_inst_queue_wakeup_accesses
+", weight=2]
+0 -> 2 [ label = ">0.48"];
+"3" [shape=box, style=filled, label="system.cpu.iq.iqInstsAdded
+", weight=3]
+2 -> 3 [ label = "<=0.62"];
+"4" [shape=box, style=filled, label="system.cpu.iq.int_alu_accesses
+", weight=4]
+3 -> 4 [ label = "<=0.75"];
+"5" [shape=box, style=filled, label="1
+(2)
+", weight=5]
+4 -> 5 [ label = "<=0.26"];
+"6" [shape=box, style=filled, label="system.cpu.iq.FU_type_0::total
+", weight=5]
+4 -> 6 [ label = ">0.26"];
+"7" [shape=box, style=filled, label="1
+(2)
+", weight=6]
+6 -> 7 [ label = "<=0.55"];
+"8" [shape=box, style=filled, label="0
+(1)
+", weight=6]
+6 -> 8 [ label = ">0.55"];
+"9" [shape=box, style=filled, label="0
+(1)
+", weight=4]
+3 -> 9 [ label = ">0.75"];
+"10" [shape=box, style=filled, label="1
+(6)
+", weight=3]
+2 -> 10 [ label = ">0.62"];
+{rank=same; 0;};
+{rank=same; 1;2;};
+{rank=same; 3;10;};
+{rank=same; 4;9;};
+{rank=same; 5;6;};
+{rank=same; 7;8;};
+}

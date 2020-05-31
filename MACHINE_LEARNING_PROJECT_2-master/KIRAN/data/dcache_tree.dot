@@ -1,0 +1,38 @@
+digraph ID3_Tree {
+"0" [shape=box, style=filled, label="system.cpu.dcache.tags.total_refs
+", weight=1]
+"1" [shape=box, style=filled, label="0
+(23)
+", weight=2]
+0 -> 1 [ label = "<=0.04"];
+"2" [shape=box, style=filled, label="system.cpu.dcache.ReadReq_hits::total
+", weight=2]
+0 -> 2 [ label = ">0.04"];
+"3" [shape=box, style=filled, label="1
+(4)
+", weight=3]
+2 -> 3 [ label = "<=0.11"];
+"4" [shape=box, style=filled, label="system.cpu.dcache.WriteReq_hits::total
+", weight=3]
+2 -> 4 [ label = ">0.11"];
+"5" [shape=box, style=filled, label="0
+(5)
+", weight=4]
+4 -> 5 [ label = "<=0.15"];
+"6" [shape=box, style=filled, label="system.cpu.dcache.WriteReq_accesses::total
+", weight=4]
+4 -> 6 [ label = ">0.15"];
+"7" [shape=box, style=filled, label="1
+(6)
+", weight=5]
+6 -> 7 [ label = "<=0.71"];
+"8" [shape=box, style=filled, label="0
+(1)
+", weight=5]
+6 -> 8 [ label = ">0.71"];
+{rank=same; 0;};
+{rank=same; 1;2;};
+{rank=same; 3;4;};
+{rank=same; 5;6;};
+{rank=same; 7;8;};
+}

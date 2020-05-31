@@ -1,0 +1,14 @@
+digraph ID3_Tree {
+"0" [shape=box, style=filled, label="system.cpu.dtb.rdAccesses
+", weight=1]
+"1" [shape=box, style=filled, label="0
+(29/5)
+", weight=2]
+0 -> 1 [ label = "<=0.56"];
+"2" [shape=box, style=filled, label="1
+(5)
+", weight=2]
+0 -> 2 [ label = ">0.56"];
+{rank=same; 0;};
+{rank=same; 1;2;};
+}

@@ -1,0 +1,22 @@
+digraph ID3_Tree {
+"0" [shape=box, style=filled, label="system.cpu.int_regfile_writes
+", weight=1]
+"1" [shape=box, style=filled, label="0
+(23)
+", weight=2]
+0 -> 1 [ label = "<=0.05"];
+"2" [shape=box, style=filled, label="system.cpu.int_regfile_reads
+", weight=2]
+0 -> 2 [ label = ">0.05"];
+"3" [shape=box, style=filled, label="1
+(7/6)
+", weight=3]
+2 -> 3 [ label = "<=0.87"];
+"4" [shape=box, style=filled, label="1
+(3)
+", weight=3]
+2 -> 4 [ label = ">0.87"];
+{rank=same; 0;};
+{rank=same; 1;2;};
+{rank=same; 3;4;};
+}

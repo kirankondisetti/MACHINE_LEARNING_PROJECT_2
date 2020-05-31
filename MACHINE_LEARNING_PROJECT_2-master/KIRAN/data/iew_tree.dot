@@ -1,0 +1,30 @@
+digraph ID3_Tree {
+"0" [shape=box, style=filled, label="system.cpu.iew.iewExecutedInsts
+", weight=1]
+"1" [shape=box, style=filled, label="0
+(27)
+", weight=2]
+0 -> 1 [ label = "<=0.48"];
+"2" [shape=box, style=filled, label="system.cpu.iew.lsq.thread0.rescheduledLoads
+", weight=2]
+0 -> 2 [ label = ">0.48"];
+"3" [shape=box, style=filled, label="1
+(9)
+", weight=3]
+2 -> 3 [ label = "<=0.04"];
+"4" [shape=box, style=filled, label="system.cpu.iew.exec_branches
+", weight=3]
+2 -> 4 [ label = ">0.04"];
+"5" [shape=box, style=filled, label="0
+(2)
+", weight=4]
+4 -> 5 [ label = "<=0.46"];
+"6" [shape=box, style=filled, label="1
+(1)
+", weight=4]
+4 -> 6 [ label = ">0.46"];
+{rank=same; 0;};
+{rank=same; 1;2;};
+{rank=same; 3;4;};
+{rank=same; 5;6;};
+}

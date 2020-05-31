@@ -1,0 +1,18 @@
+commit:0 1 2 3 4 5 6 7 13 14 15 16 17
+cc_regfile:8 9
+branchPred:10
+committed:11 12
+dtb:18
+decode:19
+dcache:20 21 22 23 24 25 26 27 28 29 30
+fetch:31
+iew:32 33 35 36 37 38 47 48 49 50 51
+icache:34
+iq:39 40 41 42 43 44
+int_regfile:45 46
+misc_regfile:52
+memDep0:53 54 55
+rename:56 57 58
+rob:59
+workload:60
+mem_ctrls:61 62

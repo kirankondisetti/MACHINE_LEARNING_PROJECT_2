@@ -1,0 +1,17 @@
+cc_regfile
+decode
+int_regfile
+misc_regfile
+branchPred
+committed
+fetch
+rob
+icache
+workload
+dtb
+rename
+memDep0
+commit
+dcache
+iq
+iew
